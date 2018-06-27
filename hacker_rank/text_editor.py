@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
 """
-implementing a simple text editor"
+implementing the text ediotrr
 """
 
 if __name__ == "__main__":
