@@ -1,6 +1,8 @@
 #!/usr/bin/python
 import sys
-
+"""
+implementing a simple text editor"
+"""
 
 if __name__ == "__main__":
 	print_stack = []
