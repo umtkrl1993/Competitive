@@ -26,6 +26,7 @@ if __name__ == "__main__":
 			delete_index = int( line.split(" ")[1] )
 			main_string_length = len( main_string )
 			deleted_string = main_string[main_string_length-delete_index:main_string_length]
+			main_string = main_string[0:main_string_length-delete_index]
 			operation_stack.append( {2:[ delete_index, deleted_string] })
 
 		elif command == 3:
@@ -35,7 +36,7 @@ if __name__ == "__main__":
 
 		else:
 			last_operation = operation_stack.pop()
-			for key,value in  last_operation:
+			for key,value in  last_operation.iteritems():
 				if key == 1:
 					string_to_be_truncated = value
 					length_string = len( string_to_be_truncated )
