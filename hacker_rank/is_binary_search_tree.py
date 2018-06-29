@@ -21,7 +21,7 @@ def isBST( root, max_value, min_value ):
 	if root == None:
 		return True
 
-	if root.data > max_value-1 or root.data < min_value:
+	if root.data > max_value-1 or root.data < min_value+1:
 		return False
 
 	return_left = isBST( root.left, root.data, min_value )
@@ -29,11 +29,3 @@ def isBST( root, max_value, min_value ):
 	
 	return return_left and return_right
 
-
-
-if __name__ == "__main__":
-	root = node(5)
-	root.left = node(5)
-	root.right = node(10)
-
-	print check_binary_search_tree_( root )
